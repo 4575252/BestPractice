@@ -1,4 +1,9 @@
 BestPractice
 ============
 
-Best Practice
+# 项目列表
+## Maven In Action (Maven实战 许晓斌著)
+* 针对书中多个最佳实践进行练习，如maven自动构建、聚合和继承、资源过滤、多种依赖处理
+* 其中对于junit的用法约定、随即验证码图片生成是不错的体验
+
+##
