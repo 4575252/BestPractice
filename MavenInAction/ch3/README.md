@@ -12,26 +12,26 @@
 		3.安装github client，会自动生成git shell和github browser，默认可能会自动生成ssh key，如果没有则进行以下步骤
 		
 ### 1.2.1 git ssh2配置
-1.打开gitshell
-		ssh-keygen -t rsa -C "4575252@gmail.com"//填写email地址，然后一直“回车”ok
-2.打开本地..\.ssh\id_rsa.pub文件。此文件里面内容为刚才生成的密钥。
-3.登陆github系统。点击右上角的 Account Settings--->SSH Public keys ---> add another public keys
-4.把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了
-5. 接着打开git ，测试连接是否成功
-		$ ssh -T git@github.com
-6.如果提示：Hi defnngj You've successfully authenticated, but GitHub does not provide shell access. 说明你连接成功了
+		1.打开gitshell
+				ssh-keygen -t rsa -C "4575252@gmail.com"//填写email地址，然后一直“回车”ok
+		2.打开本地..\.ssh\id_rsa.pub文件。此文件里面内容为刚才生成的密钥。
+		3.登陆github系统。点击右上角的 Account Settings--->SSH Public keys ---> add another public keys
+		4.把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了
+		5. 接着打开git ，测试连接是否成功
+				$ ssh -T git@github.com
+		6.如果提示：Hi defnngj You've successfully authenticated, but GitHub does not provide shell access. 说明你连接成功了
 		
 ### 1.2.2 git 用户配置
 		$ git config --global user.name "linke"//给自己起个用户名
 		$ git config --global user.email  "4575252@gmail.com"//填写自己的邮箱
 		
 ### 1.2.3 eclipse git配置
-1.打开eclipse, 设置ssh2,  Window > Preferences > General > Network Connections > SSH2  选择 ~/.ssh的绝对路径
+		1.打开eclipse, 设置ssh2,  Window > Preferences > General > Network Connections > SSH2  选择 ~/.ssh的绝对路径
 		
 ### 1.4 集成使用
-1.github.com 创建源码库,并拷贝地址
-2.eclipse 的 git 视图 clone 刚刚的地址, 让他指向本地某个文件夹
-3.eclipse中创建maven工程存放于git刚clone出来的目录, 然后就用可以类似svn进行版本处理了
+		1.github.com 创建源码库,并拷贝地址
+		2.eclipse 的 git 视图 clone 刚刚的地址, 让他指向本地某个文件夹
+		3.eclipse中创建maven工程存放于git刚clone出来的目录, 然后就用可以类似svn进行版本处理了
 
 2.maven helloworld 工程练习
 --------------------------
