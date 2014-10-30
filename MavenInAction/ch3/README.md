@@ -1,11 +1,8 @@
 本项目练习的目的:
 ==========================
 1.工具整合使用(eclipse、git、github、maven）
-2.maven helloworld 工程练习
-
-
-
-环境配置:
+--------------------------
+###环境配置:
 下载eclipse luna、jdk、maven、github client（需要先注册帐号）
 安装jdk、解压maven、解压eclipse
 配置jdk和maven的环境变量JDK_HOME、MAVEN_HOME到安装目录，并添加%JDK_HOME%\bin到path路径，添加M2指向%MAVEN_HOME%\bin；添加M2到PATH路径
@@ -26,6 +23,12 @@ github.com 创建源码库,并拷贝地址
 eclipse 的 git 视图 clone 刚刚的地址, 让他指向本地某个文件夹
 eclipse中创建maven工程存放于git刚clone出来的目录
 然后就用可以类似svn进行版本处理了
+
+2.maven helloworld 工程练习
+--------------------------
+
+
+
 
 
 
