@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>net.linzhihui.bestPractice.mavenInAction</groupId>
+		<artifactId>ch802</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<!-- 如果父子目录平级，还需要指定父pom的路径 <relativePath>../demo-parent/pom.xml</relativePath> -->
+	</parent>
+	<!-- 继承父pom就不需要再指定group和version <groupId>net.linzhihui.bestPractice.mavenInAction</groupId> 
+		<version>0.0.1-SNAPSHOT</version> <url>http://maven.apache.org</url> -->
+
+	<artifactId>ch802-a</artifactId>
+	<name>ch802-a</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<mail.version>1.4.1</mail.version>
+	</properties>
+	<dependencies>
+		<!-- 声明父pom中的依赖 这样才会真正被使用 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
+		<!-- 扩展依赖 父pom中并没有声明 不会影响到父POM 和其他模块 -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${mail.version}</version>
+		</dependency>
+	</dependencies>
+</project>
