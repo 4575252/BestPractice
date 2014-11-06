@@ -19,11 +19,10 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
-      <scope>test</scope>
     </dependency>
   </dependencies>
   <modules>
-  	<module>ch801-1</module>
-  	<module>ch801-2</module>
+  	<module>ch801-a</module>
+  	<module>ch801-b</module>
   </modules>
 </project>

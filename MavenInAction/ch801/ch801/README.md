@@ -1,6 +1,13 @@
 # maven实战第八章练习
-## 本章要点
-### 聚合配置
-		1.创建父工程，修改pom文件中打包方式为pom
-		2.添加2个子工程（model），父子工程都需要做相应设置，如果使用eclipse则此处配置可以省略
-		注：上面这步ide提供的操作可能生成一些无用的代码
+## 一、聚合配置
+### 创建父工程，修改pom文件中打包方式为pom
+		  <packaging>pom</packaging>
+### 添加2个子模块（model），父工程添加配置
+		<project ...>
+			.......
+		  <modules>
+		  	<module>ch801-a</module>
+		  	<module>ch801-b</module>
+		  </modules>
+		</project>
+		
