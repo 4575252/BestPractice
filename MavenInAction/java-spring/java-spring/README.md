@@ -1,4 +1,4 @@
-# maven web 项目实战 之 hibernate
+# maven web 项目实战 之 srping
 ## 本章要点
 * maven quickstart 工程创建
 * spring依赖注入
