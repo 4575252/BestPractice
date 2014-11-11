@@ -10,6 +10,7 @@
 * 线程池
 * 网络编程
 * 设计模式：观察者模式
+* 注解，重点！
 
 
 ### 装饰者模式
@@ -47,5 +48,17 @@
 ### 观察者模式
 		感觉应该叫被观察者模式跟贴切
 		本项目实例中，被观察者清楚的知道自己的观察者是谁，当事件触发则第一时间通知观察者
+		
+### 注解
+		包括三个内置注解，四个元注解，和用户自定义注解
+		1.内置注解包括@Override,@Deprecated,@SuppressWarnings
+			@Override用于覆盖，如果名称写错或不存在着编译器报错
+			@Deprecated用于提醒用户该方法已过期
+			@SuppressWarnings（“xxx”）用于告诉编译器忽略警告
+		2.元注解包括@Retention，@Documented,@Target,@Inherited
+			@Retention，定义使用范围，包括源码，class文件，运行时
+			@Documented，用于javadoc执行时一并生成注解
+			@Target，用于定义注解用于编码时的存放位置，如type-类，method-方法，field-字段等。
+			@Inherited,表示类的注解是否允许被子类继承，有标注则默认为true
 		
 		
