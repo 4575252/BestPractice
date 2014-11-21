@@ -17,3 +17,4 @@
 ### kaptcha的使用
 		配置web.xml，添加servlet，具体参数详见官方文档
 		配置测试用test.jsp和响应result.jsp
+注：spring的集成可参考 http://blog.csdn.net/rambo_china/article/details/7720181
