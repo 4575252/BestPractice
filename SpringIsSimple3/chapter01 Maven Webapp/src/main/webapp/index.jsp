@@ -21,7 +21,6 @@
      -->
 </head>
 <script>
-    //window.location.href = "<c:url value="/admin/login.html" />";
-    alert("<c:url value="/admin/login.html" />");
+    window.location.href = "<c:url value="/admin/login.html" />";
 </script>
 </html>
