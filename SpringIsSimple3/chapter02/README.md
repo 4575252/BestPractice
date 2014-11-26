@@ -7,7 +7,7 @@
 	ClassPathXmlApplicationContext
 	FileSystemXmlApplicationContext
 	AnnotationConfigApplicationContext
-	WebApplicationContext(参考chapter01章节，这里不做演示），spring提供了ContextLoaderServlet和ContextLoaderListener针对新旧web容器的支持
+	WebApplicationContext(参考chapter01和chapter021，这里不做演示），spring提供了ContextLoaderListener对web容器的支持
 
 ### 例1，使用ClassPathXmlApplicationContext加载xml使用
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(String path);

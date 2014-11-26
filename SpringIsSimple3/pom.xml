@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>net.linzhihui.bestPractice.sis</groupId>
@@ -84,7 +85,7 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql.version}</version>
 			</dependency>
-			<!--�?依赖的公共类�?-->
+			<!--�?依赖的公共类�? -->
 			<dependency>
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
@@ -110,11 +111,11 @@
 				<artifactId>com.springsource.net.sf.cglib</artifactId>
 				<version>${fakepath.version}</version>
 			</dependency>
-	        <dependency>
-	            <groupId>cglib</groupId>
-	            <artifactId>cglib-nodep</artifactId>
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
 				<version>${cglib-nodep.version}</version>
-	        </dependency>
+			</dependency>
 			<dependency>
 				<groupId>fakepath</groupId>
 				<artifactId>com.springsource.net.sf.cglib</artifactId>
@@ -143,7 +144,7 @@
 				<artifactId>jstl</artifactId>
 				<version>${jstl.version}</version>
 			</dependency>
-			<!--�?依赖的测试类�?-->
+			<!--�?依赖的测试类�? -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
@@ -159,7 +160,8 @@
 
 	<modules>
 		<module>chapter01</module>
-    <module>chapter02</module>
-  </modules>
+		<module>chapter02</module>
+		<module>chapter021</module>
+	</modules>
 
 </project>
