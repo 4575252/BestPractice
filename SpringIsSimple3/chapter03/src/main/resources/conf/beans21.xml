@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- 普通方法名匹配切面 -->
+	<bean id="waiterTarget" class="org.chapter0321.Waiter" />
+	<bean id="sellerTarget" class="org.chapter0321.Seller" />
+	<bean id="greetingAdvice" class="org.chapter0321.GreetingBeforeAdvice" />
+	<bean id="greetingAdvisor" class="org.chapter0321.GreetingAdvisor"
+		p:advice-ref="greetingAdvice" />
+
+	<bean id="parent" abstract="true"
+		class="org.springframework.aop.framework.ProxyFactoryBean"
+		p:interceptorNames="greetingAdvisor" p:proxyTargetClass="true" />
+	<bean id="waiter" parent="parent" p:target-ref="waiterTarget" />
+	<bean id="seller" parent="parent" p:target-ref="sellerTarget" />
+</beans>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd">
+	<aop:config proxy-target-class="true">
+	    <aop:advisor advice-ref="testAdvice"  pointcut="execution(* org..*.Waiter.greetTo(..))"/>  
+		<aop:aspect ref="adviceMethods">
+			<aop:before method="preGreeting"
+				pointcut="target(org.chapter0341.NaiveWaiter) and args(name)"
+				arg-names="name" />
+			<aop:after-returning method="afterReturning"
+				pointcut="target(org.chapter0341.SmartSeller)" returning="retVal" />
+			<aop:around method="aroundMethod"
+				pointcut="execution(* serveTo(..)) and within(org.chapter0341.Waiter)" />
+			<aop:after-throwing method="afterThrowingMethod"
+				pointcut="target(org.chapter0341.SmartSeller) and execution(* checkBill(..))"
+				throwing="iae" />
+			<aop:after method="afterMethod"
+				pointcut="execution(* org..*.Waiter.greetTo(..))" />
+			<aop:declare-parents
+				implement-interface="org.chapter0341.Seller"
+				default-impl="org.chapter0341.SmartSeller"
+				types-matching="org.chapter0341.Waiter+" />
+		</aop:aspect>
+	</aop:config>
+    <bean id="testAdvice" class="org.chapter0341.BeforeAdvice"/>
+	<bean id="adviceMethods" class="org.chapter0341.AdviceMethods" />
+	<bean id="naiveWaiter" class="org.chapter0341.NaiveWaiter" />
+	<bean id="naughtyWaiter" class="org.chapter0341.NaughtyWaiter" />
+	<bean id="seller" class="org.chapter0341.SmartSeller" />
+</beans>
